@@ -11,6 +11,7 @@
 namespace solunet
 {
   ISocket *createSocket(bool ssl = false);
+  void cleanup();
 }
 
 #endif

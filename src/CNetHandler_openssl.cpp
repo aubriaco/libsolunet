@@ -11,6 +11,13 @@
 namespace solunet
 {
 
+  void cleanup()
+  {
+    EVP_cleanup();
+		CRYPTO_cleanup_all_ex_data();
+		ERR_free_strings();
+  }
+
 static bool bThreadSetup = false;
 static pthread_mutex_t *lock_cs;
 static long *lock_count;
