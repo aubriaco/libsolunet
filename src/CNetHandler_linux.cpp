@@ -13,6 +13,8 @@ namespace solunet
 
 CNetHandlerSocket* CNetHandler::createSocket(bool ssl)
 {
+	if(!CNetHandler_SSLInitialized)
+		initDependencies();
 	return new CNetHandlerSocket(0, ssl);
 }
 
