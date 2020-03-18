@@ -46,6 +46,8 @@ namespace solunet
     virtual int getTimeout() = 0;
 
     virtual bool isConnected() = 0;
+
+    virtual void dispose() = 0;
   };
 }
 

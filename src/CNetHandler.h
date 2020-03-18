@@ -87,6 +87,8 @@ public:
 	int getTimeout() { return Timeout; }
 
 	bool isConnected();
+
+	void dispose() { delete this; }
 };
 
 class CNetHandler
